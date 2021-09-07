@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+body {
+    min-height: 10000vh;
+    /* background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%); */
+    /*background-image: linear-gradient(to right, #434343 0%, black 100%);*/
+    background-color: #170F23;
+}
+
+
+/* pagination */
+
+#page-btn ul {
+    list-style: none;
+    display: flex;
+}
+
+#page-btn ul li {
+    padding: 8px 12px;
+    border: 1px solid #000;
+}
+
+#page-btn ul li.active {
+    color: #fff;
+    background-color: #0cbaba;
+    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
+
+.paginationjs {
+    display: flex;
+    align-items: center;
+}
+
+.paginationjs-go-input {
+    margin-left: 12px;
+    padding-bottom: 18px;
+    max-width: 50px;
+}
+
+.paginationjs-go-input input {
+    width: 100%;
+}
+
+.paginationjs-go-button {
+    padding-bottom: 18px;
+    margin-left: 12px;
+}
+
+
+/* end */
+
+
+/* login */
+
+.app-login {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    background-color: #432275;
+}
+
+.form-login {
+    z-index: 10000;
+    position: relative;
+}
+
+.app-login form {
+    border-radius: 16px;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    padding: 50px 30px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.app-login form h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.app-login .err-msg {
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    color: red;
+    margin-bottom: 16px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.app-login form .form-group {
+    margin-bottom: 30px;
+}
+
+.app-login form label {
+    display: block;
+    color: #eee;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.app-login form input {
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none
+}
+
+.app-login form input:not([type="submit"]) {
+    border-radius: 8px;
+    width: 100%;
+    display: block;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transition: all ease-in-out 0.4s;
+    color: #222;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.app-login form input:not([type="submit"])::placeholder {
+    color: #ccc;
+}
+
+
+/*:valid là dùng để khi có chữ trong input thì nó hiện màu trắng còn không có thì màu bth*/
+
+.app-login form input:not([type="submit"]):focus,
+.app-login form input:not([type="submit"]):valid {
+    background: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.app-login form input[type="submit"] {
+    border-radius: 8px;
+    width: 100%;
+    display: block;
+    background-color: #9fa4c4;
+    background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
+    padding: 15px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transition: all ease-in-out 0.4s;
+    color: #222;
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+/* app */
+
+.live {
+    position: absolute;
+    top: -13px;
+    right: 10px;
+    background: red;
+    color: #fff;
+    padding: 0px 14px;
+    border-radius: 30px;
+}
+
+.app {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.app .category {
+    width: 240px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.app .category .logo img {
+    width: 100%;
+    padding: 12px 40px;
+}
+
+.app .body {
+    position: relative;
+    width: calc(100% - 240px);
+    left: 240px;
+}
+
+.app .component {
+    list-style: none;
+    margin-top: 12px;
+}
+
+.app .component li.active {
+    background-color: #393243;
+    border-left: 4px solid #7200A1;
+    color: #fff;
+}
+
+.app .component li {
+    padding: 10px 40px;
+}
+
+.app .component li:hover {
+    color: #fff;
+}
+
+.app .component li a {
+    color: #eee;
+}
+
+.app .component li i {
+    margin-right: 12px;
+}
+
+.app .component .component-2 {
+    padding: 12px;
+    overflow-y: scroll;
+    height: 180px;
+}
+
+.app .component-2::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.app .component-2::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+}
+
+.app .component-2::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+    background-color: #ccc;
+}
+
+.app .component-2 .bonus {
+    padding: 8px 10px;
+    background-image: linear-gradient( 117deg, #5a4be7, #c86dd7 102%);
+    border-radius: 14px;
+    text-align: center;
+}
+
+.app .component-2 .bonus a {
+    padding: 2px 12px;
+    border-radius: 17px;
+    color: #000;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.app .component-2 .bonus p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.app .component-2 .lib {
+    margin-top: 12px;
+}
+
+.app .component-2 .lib span {
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.app .create-playlist {
+    border-top: 1px solid #393243;
+    padding: 12px;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.app .create-playlist i {
+    margin-right: 8px;
+}
+
+
+/* bar music */
+
+.app .bar-music {
+    width: 100%;
+    background-color: #120C1C;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 83px;
+    padding: 8px 12px;
+    display: flex;
+}
+
+.app .bar-music .component-1 {
+    display: flex;
+    padding: 4px;
+}
+
+.app .bar-music .component-1 img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%
+}
+
+.app .bar-music .component-1 .title {
+    margin-top: 4px;
+    margin-left: 8px;
+}
+
+.app .bar-music .component-1 .icon {
+    margin-top: 12px;
+    margin-left: 12px;
+    color: #fff;
+}
+
+.app .bar-music .component-1 .icon i {
+    margin: 0 8px;
+}
+
+.app .bar-music .component-1 .icon i.heart {
+    color: #7200A1;
+}
+
+.app .bar-music .component-2 {
+    min-width: 400px;
+    position: relative;
+    left: 15%;
+}
+
+.app .bar-music .component-2 .control {
+    color: #fff;
+}
+
+.app .bar-music .component-2 input {
+    width: 100%;
+    height: 3px;
+    margin-top: 6px;
+}
+
+.app .bar-music .component-3 {
+    position: relative;
+    left: 25%;
+    display: flex;
+    margin-top: 12px;
+    align-items: center;
+}
+
+.app .bar-music .component-3 i {
+    margin: 0 8px;
+    color: #fff;
+}
+
+.app .bar-music .component-3 .volume input {
+    height: 3px;
+}
+
+.app .bar-music .component-3 .volume {
+    display: flex;
+    align-items: center;
+}
+
+.app .bar-music .component-3 .list-music {
+    padding: 0 8px;
+    font-size: 1.4rem;
+    border-left: 2px solid hsla(0, 0%, 100%, 0.5);
+    margin-left: 24px;
+    cursor: pointer;
+}
+
+.app .bar-music .component-3 .list-music i:hover {
+    color: #fff !important;
+}
